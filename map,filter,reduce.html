@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+</head>
+<body>
+    <!-- map,filter and reduce mathod have to use with function -->
+    <script>
+        // use map when u want to fix or add the value without changing the orginal value
+        let name = ['yin','naing','aung']
+        let add = name.map(function(all){  
+            return "Mr-" + all
+        })
+
+        // use filter more to check the number
+        let num = [2,3,4,6,7,9]
+        let check = num.filter((nums)=>{
+            return nums>=5         
+        })
+
+        // tips and tricks
+        let number = [1,2,3,4,5,6,7,8]
+        let nums=number.filter(para=>para%2)
+
+        // use map and filter together
+        let map_filter = number.map(nums=> nums+=2).filter(nus=>nus%2)
+
+        // Reduce 
+        // give out all the value of sum in array
+        let red = number.reduce((one,two)=>one+two)
+
+        // Spread 
+        // to mux or change from two or more arrays to one array
+        let one= ['first job','first impression']
+        let two = ['last job','last impression']
+        let mux = [...one,...two]
+
+
+    </script>
+
+    
+</body>
+</html>

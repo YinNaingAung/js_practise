@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function add(){
+            let result = 0 
+
+        for(let x =0; x<10;x++){
+            result += x
+        }
+        return result 
+        }
+        // console.log(add())
+        async function pro(){
+            let result =await add()
+            console.log(result)
+        }
+        pro()
+        console.log("a")
+        console.log("b")
+    </script>
+</body>
+</html>

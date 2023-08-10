@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- if else statement or control flow -->
+    <script>
+        // if(){
+            // statement
+        // }else{
+            // statement
+        // }
+
+        if(2>3){
+            console.log("I'm backend developer")
+        }else{
+            console.log("I'm frontend developer")
+        }
+
+        let user= [ 
+            {
+                name:'yinaingaung',
+                age:21,
+                education:'third year',
+                job:'developer',
+                gender:"m",
+                ticket:null
+            },
+            {
+                name:'soeyanpaing',
+                age:22,
+                education:'thrid year',
+                job:'developer',
+                gender:'M',
+                ticket:null
+            },
+            {
+                name:'myintmyint',
+                age:23,
+                education:'final',
+                job:'designer',
+                gender:'f',
+                ticket:null
+            },
+
+             {
+                name:'myintmyat',
+                age:23,
+                education:'final',
+                job:'designer',
+                gender:null,
+                ticket:null
+            }
+        ]
+            
+
+        // let dev = user.map(para=>{
+        //     if(para.gender==='m'){
+        //         para.gender ="male"
+        //     }else if(para.gender === "M"){
+        //         para.gender = "male"
+        //     }else if(para.gender ==="f"){
+        //        para.gender = "female"
+        //     }else if(para.gender ==="F"){
+        //         para.gender="female"
+        //     }else{
+        //         para.gender="unknown"
+        //     }
+         
+        //   if(para.age){
+        //     if(para.age >22){
+        //         para.ticket = true
+        //     }
+        //     if(para.age===22){
+        //         para.ticket = false
+        //     }
+        //     if(para.age<22){
+        //     para.ticket= "unknown"
+        //     }
+        // }
+        //  return para
+        // })
+
+        // console.table(dev)
+
+//  if(para.age>22 || para.age===22) &&
+
+let switch_method = user.map(para=>{})
+
+        // switch statement
+        let day = 2
+        switch (day)
+        {
+            case 1:
+                console.log('monday')
+                break;
+            case 2:
+                console.log('tuesday')
+                break;
+            default:
+                console.log('sunday')
+                break;
+        }
+
+
+        let age = user.map(para=>{
+            const obj ={value:22}
+            switch(true){
+                case para.age>obj.value:
+                    para.ticket ='true'
+                    break;
+                case para.age===obj.value:
+                    ticket='false'
+                    break;
+                default:
+                    ticket="unknown"
+            }
+            // if(para.age){
+            // if(para.age >22){
+            //     para.ticket = true
+            // }
+            // if(para.age===22){
+            //     para.ticket = false
+            // }         
+            // if(para.age<22){
+            // para.ticket= "unknown"
+            // } 
+        // }
+        return para
+        })
+        console.table(age)
+    </script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Everything is object in js. -->
+    <!-- Everything in object is called DOM. -->
+    <!-- we call tab of browser as Dom or the whole thing under url bar or inside vs code start from Doctypehtml to </html> are dom-->
+    
+
+    <!-- let's control style with Dom -->
+    <style>
+        .btn{
+            background-color:blue;
+            color:aliceblue;
+            border-radius:10px;
+            cursor:pointer 
+        }
+        .color-bv{
+            color:blueviolet
+        }
+        .color-pink{
+            color:gold
+        }
+    </style>
+    <main>
+        <h1 class="head">I'm heading 1</h1>
+        <p id="paragraph">I'm paragraph</p>
+    </main>
+    <b id="b-t">I'm bold text</b>
+    <button class="btn" onclick="change()">
+        Click me
+    </button>
+    <button class="btn-tn">
+        change button 
+    </button>
+    <br>
+    <div class="append">
+
+    </div>
+    <div class="insert">
+       <h2> and I will do my best</h2>
+    </div>
+<script>
+    let paragraph = document.getElementById('paragraph')
+        paragraph.style.color= "red";
+    let heading = document.querySelector('.head')
+        heading.style.color='green'
+
+        paragraph.style.paddingTop= '50px'
+        heading.style["padding-top"]= '20px'
+        // toggle use to close or open nav bar
+
+        // textContent properties  element selectors aren't working
+        // .innerHTML properties  element selectors are working
+
+        function change(){
+            if(paragraph.style.color === "red" && heading.style.color ==="green"){
+            paragraph.style.color ="blue"
+            heading.style.color ="pink"
+            paragraph.textContent="heading"
+            heading.innerHTML="<h1>paragraph</h1>"
+            btext.classList.add('color-bv')
+           }else{
+            paragraph.style.color = "red";
+            heading.style.color = "green"
+            paragraph.textContent ="I'm paragraph"
+            heading.innerHTML="I'm heading 1"
+            btext.classList.remove('color-bv')
+        }
+     }
+        // text content or inner html to change text
+        // toggle method
+        let button = document.querySelector(".btn-tn")   
+        button.addEventListener("click",()=>{
+               let btext = document.getElementById('b-t')
+            btext.classList.toggle('color-pink')
+
+        })  
+        // method
+        // remove() add() toggle()  
+        // paragraph.remove()
+        let btext = document.getElementById('b-t')
+            btext.classList.add('color-bv')
+
+
+        // useful methods
+        // appendchild,insertBefore 
+        // to add element and text in the tag
+
+        let element1 = document.createElement("h1")
+            element1.textContent="I'm going to be a developer"
+        let append= document.querySelector('.append')
+            append.appendChild(element1)
+
+        let element2 = document.createElement('h2')
+            element2.innerHTML="I must be a programmer"
+        let insert = document.querySelector('.insert')
+            insert.insertBefore(element2,insert.firstChild)
+
+ 
+</script>
+</body>
+</html>

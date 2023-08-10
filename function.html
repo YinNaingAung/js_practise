@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // description 
+        // accept and take the given value and then use after that give out another value
+        // function name(para,para,..){
+            // statement ;
+            // return output
+        //     console.log()
+        // }
+            // function parameter can be multiple function body with the main logic statement giving output using return keyword
+            function name(para1,para2){
+                return console.log(para1+para2)
+            }
+            name(1,2)
+
+            // function expression or annonymous function
+            let exp = function (para1,para2){
+                let sum  = para1 + para2
+                return console.log(sum)
+            }
+            exp(2,2)
+            
+            // parameter function or  callback function
+            let call = function(num,fun){
+                let sum = fun(num)
+                return console.log(sum+2)
+            }
+            call(2,function(x){
+                return x + 1
+            })
+
+            // Arrow function
+            let arrow = (a,b)=>a+b 
+            arrow(1,2)
+
+            // immediately invoked function expression
+            // IIFE
+        let aa=(function (a,b){
+                return console.log(a+b)
+            })(2,3)
+         
+            // function hoisting
+            // we can call function name before action in function statement
+           hoist()
+            function hoist(){
+                let First_name = 'yin'
+                let Last_name="naing"
+                let full_name =First_name+Last_name
+               return console.log(full_name)
+            }
+
+            // we can't in function expressoin
+
+           let info = function hoist(){
+             let q=1
+             let r=2
+             return console.log(q+r)
+            }
+            info()
+
+ 
+
+ 
+    </script>
+</body>
+</html> 

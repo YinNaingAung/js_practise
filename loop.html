@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- use loop the same action repeadly and take the value from database  -->
+
+     <script>
+        // while loop
+        // start point,end point,statement, counter
+        let x = 0
+        while (x<5) {
+            console.log("I'm while loop");
+            x++
+        }
+        // give out the value once even the condition is false
+        // do while loop
+        let i=0;
+        do{
+            console.log("i'm do while loop");
+            i++
+        }while(i<3)
+
+        // for in loop
+        let y ={
+            name:"yin naing aung",
+            age:21,
+            favourite_color:"white"
+        }
+        for ( x in y) {
+          console.log(`key is ${x} value is ${y[x]}` )
+          console.log(y.age=22)  
+        }
+       
+        // for loop
+        for(let f = 0; f<4;f++){
+            console.log("i am for loop")
+        }
+        //  for of loop
+     
+        let k=[100,400,500,800]
+        for (money of k) {
+            console.log(money)
+        }
+
+        // for loop with array
+        let arr = ['fish','beef','pork','chicken']
+        for(let x = 0;x<arr.length;x++){
+            let mapp= arr.map(para=>{
+            console.log (para +'s')
+            return para  
+            })
+        }
+        // break and continuous
+        let b_c =[100,200,400,800,1000]
+         for (x=0;x<b_c.length;x++) {
+            if(b_c[x]<400) continue
+            console.log(b_c[x])            
+         }
+
+
+     </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // <!-- firstly let's study push,pop,shift,unshift are ready to use in js -->
+
+
+        let user =['yin',21,'male','third year']
+        // use push to add value at the end
+        user.push('fullstack developer')
+        console.log(user)
+        // use pop to remove the value at the end
+        user.pop()
+        // use shift to remove the value from the beginning
+        user.shift()
+        // to add the value at the beginning
+        user.unshift('citizen')
+
+        // second
+        // indexof,splice,join
+        // to know index number
+        user.indexOf('male')
+        // =>2
+        // to delete
+       console.log(user.splice(1,2)) 
+    //    to connect 
+       user.join(',')
+        
+    //    third
+
+    // array.spread
+    let num = [2,4]
+    function arr(a,b){
+        return console.log( a + b)
+    }
+    arr(...num) 
+    // arr(...num)
+    
+    // array destructing
+    let nums = [2,4]
+    function arrs([a,b]){
+        return console.log( a + b)
+    }
+    arrs(nums)
+
+    
+
+    </script>
+</body>
+</html>

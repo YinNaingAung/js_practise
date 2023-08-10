@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- map -->
+    <script>
+        let user=[
+        {
+                name:'yin',
+                age:21,
+                education:'third',
+                job:'frontend',
+                Gender:'male'
+            },
+            {  
+                name:'naing',
+                age:22,
+                education:'final',
+                job:'backend',
+                Gender:'male'
+            },
+            {
+                name:'aung',
+                age:23,
+                education:'educated',
+                job:'fullstack',
+                Gender:'male'
+            },{
+                name:'su',
+                age:22,
+                education:'M2',
+                job:'web designer',
+                Gender:'female'
+            }
+        ]
+        let namegroup = user.map((para)=>{
+            return para.name
+        })
+        let fil = user.map(para=>para.age).filter(para=>para>21)
+
+        // filter     
+    let greaterthan_20=user.filter(para=>para.age>21)
+
+
+    // using  global variables inside object
+    let name="asu"
+    let age="22"
+    let suu ={
+                name ,
+                age:age,
+                education:'M2',
+                job:'web designer',
+                Gender:'female'
+            }
+
+    </script>
+</body>
+</html>

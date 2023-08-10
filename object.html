@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // use object to keep personal information of each person
+        let info = {
+            name:'yinnaingaung',
+            age:21,
+            Education:"third year",
+            job:'fullstack'
+        }
+        console.log(info)
+        info.name
+
+        // object in array
+        let collection =[
+            {
+                name:'yin',
+                age:21,
+                education:'third',
+                job:'frontend'
+            },
+            {  
+                name:'naing',
+                age:22,
+                education:'final',
+                job:'backend'
+            },
+            {
+                name:'aung',
+                age:23,
+                education:'educated',
+                job:'fullstack'
+            }
+        ]
+        console.table(collection)
+        collection[0].name
+
+        // object in function
+        let name = "yin naing aung"
+        let age=22
+        let infor = {
+            name,
+            age:age,
+            job:'developer',
+            user(){ 
+             return console.log("i am user yin naing aung")
+            }
+        }
+        
+
+    </script>
+</body>
+</html>

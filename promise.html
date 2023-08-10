@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            // we can use promise in stead of call back function (settime out)
+            function add(){
+                let result = 0 
+                for(let i = 0 ; i< 10; i++){
+                    result += i
+                }
+                return result 
+            }
+            // console.log(add()) 
+            // =>45
+            // function pro(){
+            //     return new Promise(mise=>{
+            //         mise(add())
+            //     }
+            //     )
+            //}
+           // pro().then(result=>console.log(result)) //result = add()
+
+            function pro(){
+                return new Promise((resolve,reject)=>{
+                    let result = add()
+                    if(result) resolve(result)
+                    else reject()
+                }) 
+            }
+            // console.log("a")
+            pro()
+            .then(result => result + 100)
+            .then(result =>console.log(result))
+            .catch(()=>console.log("bug"))
+            
+            // console.log("c")
+
+            
+    </script>
+</body>
+</html>
