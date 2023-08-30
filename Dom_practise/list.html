@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- for first eg -->
+    <ul></ul>
+    <!-- for second eg   -->
+    <ul>
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+    </ul>
+    <script>
+        // for first eg
+        let ul = document.querySelector("ul")
+        let fruits = ["papaya","Guava","Dragon Fruit"]
+        fruits.forEach(fruit => {
+            let li = document.createElement("li")
+            li.textContent = fruit
+             ul.appendChild (li)
+
+        });
+        // for second eg
+        let lis = document.querySelectorAll("ul >li")
+        // for(li of lis){
+        //     console.log(li.textContent)
+        // }
+        lis.forEach(li => console.log(li.textContent))
+
+    </script>
+</body>
+</html>

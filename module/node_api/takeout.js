@@ -24,6 +24,16 @@ fs.readFile("file.json",(err,data)=>{
         const num_422 = Responses[422]
         const Description = num_422.find(des => des.description === "HTTP 422 Unprocessable Entity")
         console.log(Description)
+
+
+
+
+
+
+
+
+
+        
     }
 
 

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        .path{
+            margin : 30px auto;
+            width:1000px;
+            height:100px;
+            background-color: aqua;
+            border-radius:20px;
+            border:5px solid red;
+            position:relative;
+            display:flex;
+            align-items: center;
+        }
+        .arrow{
+            position:absolute;
+            border: solid black;
+            border-width : 0px 10px 10px 0px;
+            display:inline-block;
+            padding:20px;  
+            transform: rotate(315deg);   
+            -webkit-transform: rotate(315deg);
+    
+        }
+        .btn-container{
+            display:flex;
+            justify-content: center;
+            gap:10px
+        }
+        #btn1,#btn2{
+            padding:5px 20px;
+            border-radius:20px;
+            font-size:20px;
+            font-weight: bold;
+            color:rgb(30, 8, 227);
+            background-color: aqua;
+            border: none;
+            cursor:pointer;
+        }
+    
+   #btn2:hover, #btn1:hover{
+            background-color: pink;
+            transition: all;
+            transition-duration: 100ms;
+        }
+        
+    
+    </style>
+
+</head>
+<style>
+    body{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+    .path{
+        margin : 30px auto;
+        width:1000px;
+        height:100px;
+        background-color: aqua;
+        border-radius:20px;
+        border:5px solid red;
+        position:relative;
+        display:flex;
+        align-items: center;
+    }
+    .arrow{
+        position:absolute;
+        border: solid black;
+        border-width : 0px 10px 10px 0px;
+        display:inline-block;
+        padding:20px;  
+        transform: rotate(315deg);   
+        -webkit-transform: rotate(315deg);
+
+    }
+    .btn-container{
+        display:flex;
+        justify-content: center;
+        gap:10px
+    }
+    #btn1,#btn2{
+        padding:5px 20px;
+        border-radius:20px;
+        font-size:20px;
+        font-weight: bold;
+        color:rgb(30, 8, 227);
+        background-color: aqua;
+        border: none;
+        cursor:pointer;
+    }
+
+    .btn:hover{
+        background-color: green;
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    
+
+</style>
+
+
+<body>
+    
+    <div class = "path">
+        <div class="arrow" id ="arrow"></div>
+    </div>
+    <div class="btn-container">
+        <button class="btn" id ="btn1" onclick="start()">start</button>
+        <button class="btn" id ="btn2" onclick="stop()">stop</button>
+    </div>
+   
+
+
+    <script>
+        let arrow = document.getElementById("arrow")
+        let left    = 0
+        let direction = "right"
+        // setInterval(()=>{
+        //     left += 1
+        //     if(left > 950) left = 0
+        //     arrow.style.left = `${left}px`
+        // },10)
+
+        // setInterval(() => {
+        //     if(direction === "right"){
+        //         left += 10
+        //         if(left > 950) direction = "left"
+        //         arrow.style.transform= "rotate(315deg)";   
+
+        //     }else {
+        //         left -= 1
+        //         if(left < 1) direction = "right";
+        //         arrow.style.transform= "rotate(135deg)";   
+        //     }
+        //     arrow.style.left = `${left}px`
+        // }, 10);
+
+        let interval = setInterval(move,10)
+
+            function move(){
+                if(direction === "right"){
+                left += 1
+                if(left > 950) direction = "left"
+                arrow.style.transform= "rotate(315deg)";   
+            }else {
+                left -= 1
+                if(left < 1) direction = "right";
+                arrow.style.transform= "rotate(135deg)";   
+            }
+
+            arrow.style.left = `${left}px`
+
+            }
+
+            function start(){
+                interval = setInterval(move,10)
+            }
+
+            function stop(){
+                clearInterval(interval)
+            }
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+
+    </script>
+</body>
+</html>

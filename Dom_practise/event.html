@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- onclick, onkeydown, onfocus -->
+
+    <div class="event">
+            forget the past
+    </div>
+    <button class="btn">click</button>
+    <div>
+        <input class="text" type="text">
+        <div class="key"></div>
+    </div>
+    <input id="color" type="text">
+
+    <script>
+        let btn = document.querySelector(".btn")
+
+        btn.onclick = function(){
+            document.querySelector(".event").textContent = "Live in the present"    
+        }
+
+         let text = document.querySelector(".text")
+         let key = document.querySelector(".key")
+         text.onkeydown = function(){
+            key.textContent = "u will see the text when u press the key inside the input field"
+         }
+
+         document.getElementById("color").onfocus = ()=>{
+            document.getElementById("color").style.backgroundColor = "red"
+         }
+
+
+    </script>
+</body>
+</html>

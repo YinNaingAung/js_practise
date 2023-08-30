@@ -44,6 +44,13 @@
     <div class="insert">
        <h2> and I will do my best</h2>
     </div>
+
+
+    <div class=" textNode">
+
+    </div>
+
+
 <script>
     let paragraph = document.getElementById('paragraph')
         paragraph.style.color= "red";
@@ -101,7 +108,27 @@
         let insert = document.querySelector('.insert')
             insert.insertBefore(element2,insert.firstChild)
 
- 
+        let  addtext  = document.createTextNode("you only lose what you think u own")
+        document.querySelector(".textNode").appendChild(addtext)
+        
+        let marQuee = document.createElement("marquee") 
+            marQuee.textContent= "learn to  rest not to quit"
+        document.querySelector(".textNode").appendChild(marQuee)
+
+        let textnode  = document.querySelector(".textNode")
+        textnode.setAttribute("title","node")
+        console.log(textnode.getAttribute("title"))
+
+
+        // to copy element 
+        let copy = textnode.cloneNode(true)
+        console.log(copy)
+        // if we put false copy will only get element and attribute
+
+        // catch parent element from child
+        let child = document.querySelector("marquee").parentNode
+        console.log(child)
+
 </script>
 </body>
 </html>

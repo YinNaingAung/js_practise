@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        .error1,.error2{
+            color:red;
+            display:none
+        }
+        .box1,.box2{
+            margin-bottom:20px;
+        }
+    </style>
+<body>
+
+        <div>
+            <h1>Form</h1>
+            <div class="add"></div>
+            <div class="box1">
+                <input class="one" placeholder="first number" type="text"> <br>
+                <b class="error1">Please Enter number</b>
+            </div>
+            <div class="box2">
+                <input class="two" placeholder="last number" type="text"> <br>
+                <b class="error2">Please Enter number</b>
+            </div>
+            <button class="btn">confirm</button>
+        </div>
+
+    <script>
+
+        document.querySelector(".btn").onclick = ()=>{
+            let one = parseInt(document.querySelector(".one").value)  //if i don't use parseInt the result would be mix
+            let two = parseInt(document.querySelector(".two").value)
+
+            let result = one + two
+            //let result = parseInt(one) + pasrseInt(two)             
+
+            if(isNaN(one)){
+                document.querySelector(".error1").style.display = "block"
+            }
+            if(isNaN(two)){
+                document.querySelector(".error2").style.display = "block"
+            }
+
+            if(!isNaN(result)){
+                document.querySelector(".add").textContent = result
+            }
+
+        }
+
+        document.querySelector(".one").onkeyup = ()=>{
+            let one = parseInt(document.querySelector(".one").value)
+            if(!isNaN(one)){
+                document.querySelector(".error1").style.display = "none"
+            }
+        }
+        document.querySelector(".two").onkeyup = ()=>{
+            let two = parseInt(document.querySelector(".two").value)
+            if(!isNaN(two)){
+                document.querySelector(".error2").style.display = "none"
+            }
+        }
+
+    </script>
+
+</body>
+</html>
